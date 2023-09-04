@@ -1,0 +1,334 @@
+<HTML>
+<HEAD>
+<SCRIPT language=javascript>
+function click(){
+if(event.button==2){
+alert('送给一个我心爱的女孩！')
+}
+}
+document.onmousedown=click
+</SCRIPT>
+<script language=JavaScript>
+var MESSAGE="如果爱上你也算是一种错，我深信这会是生命中最美丽的错，我情愿错一辈子......"
+var POSITION=100
+var DELAY=5
+var scroll=new statusMessageObject()
+function statusMessageObject(p,d){
+this.msg =MESSAGE
+this.out =" "
+this.pos =POSITION
+this.delay=DELAY
+this.i=0
+this.reset=clearMessage}
+function clearMessage(){
+this.pos=POSITION}
+function scroller(){
+for (scroll.i=0;scroll.i<scroll.pos;scroll.i++){
+scroll.out += " "}
+if (scroll.pos >= 0)
+scroll.out += scroll.msg
+else scroll.out=scroll.msg.substring(-scroll.pos,scroll.msg.length)
+window.status=scroll.out
+scroll.out=" "
+scroll.pos--
+if (scroll.pos < -(scroll.msg.length)) {
+scroll.reset()}
+setTimeout('scroller()',scroll.delay)}
+function snapIn(jumpSpaces,position){
+var msg = scroll.msg
+var out = ""
+for(var i=0; i<position; i++) 
+{out+= msg.charAt(i)}
+for(i=1;i<jumpSpaces;i++) 
+{out += " "}
+out+=msg.charAt(position)
+window.status = out
+if(jumpSpaces <= 1) {
+position++
+if(msg.charAt(position) == ' ') 
+{position++ }
+jumpSpaces = 100-position
+}else if (jumpSpaces >  3)
+{jumpSpaces *= .75}
+else
+{jumpSpaces--}
+if(position != msg.length) {
+var cmd = "snapIn(" + jumpSpaces + "," + position + ")";
+scrollID = window.setTimeout(cmd,scroll.delay);
+}else{window.status=""
+jumpSpaces=0
+position=0
+cmd = "snapIn(" + jumpSpaces + "," + position + ")";
+scrollID = window.setTimeout(cmd,scroll.delay);
+return false }
+return true}
+snapIn(100,0);
+</script>
+<style type="text/css">
+.spanstyle {
+position:absolute;
+visibility:visible;
+top:-50px;
+font-size:9pt;
+color: #09F738;
+font-weight:bold;
+}</style>
+<script>
+var x,y
+var step=20
+var flag=0
+var message="因为知道不能没有你,所以我会更珍惜.... ."
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+xpos[i]=-50}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+ypos[i]=-50}
+function handlerMM(e){
+x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+flag=1}
+function makesnake() {
+if (flag==1 && document.all) {
+for (i=message.length-1; i>=1; i--) {
+xpos[i]=xpos[i-1]+step
+ypos[i]=ypos[i-1]       }
+xpos[0]=x+step
+ypos[0]=y
+for (i=0; i<message.length-1; i++) {
+var thisspan = eval("span"+(i)+".style")
+thisspan.posLeft=xpos[i]
+thisspan.posTop=ypos[i]     }   }
+else if (flag==1 && document.layers) {
+for (i=message.length-1; i>=1; i--) {
+xpos[i]=xpos[i-1]+step
+ypos[i]=ypos[i-1]       }
+xpos[0]=x+step
+ypos[0]=y
+for (i=0; i<message.length-1; i++) {
+var thisspan = eval("document.span"+i)
+thisspan.left=xpos[i]
+thisspan.top=ypos[i]}   }
+var timer=setTimeout("makesnake()",30)}
+</script>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="Microsoft FrontPage 5.0" name=GENERATOR>
+<bgsound src="jdqs.mid" loop="3">
+<title>原来等待也可以如此的美丽,因为爱你。</title>
+</HEAD>
+<BODY onLoad="makesnake()"　text=#ffffff vLink=#00FF00 link=#FFFF00 bgColor=#000000  onselectstart="return false">
+<script>
+for (i=0;i<=message.length-1;i++) {
+document.write("<span id='span"+i+"'class='spanstyle'>")
+document.write(message[i])
+document.write("</span>")}
+if (document.layers){
+document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove = handlerMM;
+</script>
+<DIV align=center>
+<SCRIPT language=JavaScript><!--
+// Hide the JavaScript from older browsers 
+(window.alert("你来了！"))
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("我就知道你一定会来的， ")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("知道我要告诉你什么吗？")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert(" 猜出来了吗？")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("我不会写情书，只会写“心”.....")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("认识你才知道有一种心情叫做依恋，有一种感觉叫做爱。")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("不知道 爱你 算不算是一个贴心的理由？ ")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("自从你出现后，我才知道原来有人爱是那么地美好... ")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("我知道，爱要自由才能快乐！我却宁愿留在你身边，陪你、陪你走过...")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("不管今世也好来世也好...我所要的只有你...... ")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript> 
+<!-- Hide the JavaScript from older browsers 
+(window.alert("只有你知我的情绪，也只有你能带给我情绪！ ")) 
+// End hiding of script --> 
+</SCRIPT>
+<SCRIPT language=JavaScript> 
+<!-- Hide the JavaScript from older browsers 
+(window.alert("今生....如果..不能拥有你，我会............好恨自己 ")) 
+// End hiding of script --> 
+</SCRIPT>
+<SCRIPT language=JavaScript> 
+<!-- Hide the JavaScript from older browsers 
+(window.alert("不要问我爱你有多深，我真的说不出来，只知道你已成为...... ")) 
+// End hiding of script --> 
+</SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("如果爱上你也算是一种错，我深信这会是生命中最美丽的错， 我情愿错一辈子......... ")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("假如可以的话，我愿意花去生命中的每一分每一秒~陪著你~ ")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript> 
+<!-- Hide the JavaScript from older browsers 
+(window.alert("我说的都是真的，")) 
+// End hiding of script --> 
+</SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("你相信我吗？")) 
+// End hiding of script 
+// --></SCRIPT>
+<SCRIPT language=JavaScript><!-- 
+// Hide the JavaScript from older browsers 
+(window.alert("接受我的爱吧！！！")) 
+// End hiding of script 
+// --></SCRIPT>
+<p><img border="0" src="pic1.gif" width="44" height="41"></p>
+<CENTER>
+<TABLE width=574>
+ <TBODY>
+ <TR>
+ <TD align=middle width=558>
+ <P align=left>
+ <CENTER>
+ <p></p>
+ </CENTER>
+ <P 
+ align=center><b><font size="4" color="#FF00FF">让我痴迷的你：<BR>&nbsp;最近过的如何？</font></b><FONT size=2 color="#FF00FF"> </FONT></P>
+ <P 
+ align=center><img border="0" src="pic2.gif" width="50" height="40"><FONT size=2><font color="#FFFF00"><BR>你仿佛有一种魔力,<BR>使我每次见到你都会感到自己的心在狂跳不止,<BR>我知道你根本没有意识到我的存在,<BR>但你的容颜,<BR>已在我逐渐变冷的心中点燃了熊熊烈火,<BR>好几次我想鼓起勇气向你表明心中的感受,<BR>但是只被你那一双明亮的眼睛压了回去,<BR>我是如此的害怕看你的双眼,<BR>只好把话留在心里.<BR>我努力的强迫自己不去想你,<BR>不要打扰你平静的生活,<BR>尽管如此,当我闭上双眼,<BR>你的身影又浮现在我的眼前.<BR>我挥手让他散去,<BR>他却纹丝不动,<BR>我终于明白,<BR>你对于我来说不只是一阵过眼云烟,<BR>而是深深的印在了我的每一个角落.<BR>在我的心中,有一间为你敞开门的小屋,<BR>它的名字叫"爱" 
+ , 
+ <BR>我始终把他藏在那最温暖的角落,<BR>等待着你能住在里面,我期望有一天,<BR>你也能把你的心扉向我敞开,<BR>不要让我的梦想象一个美丽的泡泡一样破灭,<BR>美丽的东西都是应该被珍藏的,对吗?<BR>让我的梦想变成现实吧!<BR>不要让他再折磨我,<BR>我会付出我的一切,关心你,爱护你,<BR>让你这朵美丽的花朵永远不会凋谢,<BR>哪怕是有狂风暴雨,<BR>我的温暖都会在你身边! 
+ <BR><BR><BR>祝你永远漂亮！<BR></font><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FFFF00">&nbsp; 
+ </font></FONT><font color="#00FF00" size="4">爱你的我</b></font></P>
+ <P 
+ align=center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ <img border="0" src="pic3.gif" width="38" height="21"></P> 
+ <P 
+ align=center><b><strong><font size="3" color="#008000"><i> 
+ <marquee align="middle" scrollamount="3">你知道吗？其实最远的距离并不是天涯海角，而是我在你身边你却不懂我的心！</marquee> 
+ </i></font></strong></b><FONT size=2> 
+ <BR></P></FONT></TD></TR></TBODY></TABLE></DIV> 
+<P align=center><BR> 
+<SCRIPT language=JavaScript1.2><!-- Begin 
+var no = 15; // snow number 
+var speed = 10; // smaller number moves the snow faster 
+var snowflake = "xin.gif"; 
+var ns4up = (document.layers) ? 1 : 0; // browser sniffer 
+var ie4up = (document.all) ? 1 : 0; 
+var dx, xp, yp; // coordinate and position variables 
+var am, stx, sty; // amplitude and step variables 
+var i, doc_width = 800, doc_height = 600; 
+if (ns4up) { 
+doc_width = self.innerWidth; 
+doc_height = self.innerHeight; 
+} else if (ie4up) { 
+doc_width = document.body.clientWidth; 
+doc_height = document.body.clientHeight; 
+} 
+dx = new Array(); 
+xp = new Array(); 
+yp = new Array(); 
+am = new Array(); 
+stx = new Array(); 
+sty = new Array(); 
+for (i = 0; i < no; ++ i) { 
+dx[i] = 0; // set coordinate variables 
+xp[i] = Math.random()*(doc_width-50); // set position variables 
+yp[i] = Math.random()*doc_height; 
+am[i] = Math.random()*20; // set amplitude variables 
+stx[i] = 0.02 + Math.random()/10; // set step variables 
+sty[i] = 0.7 + Math.random(); // set step variables 
+if (ns4up) { // set layers 
+if (i == 0) { 
+document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src=\"" + snowflake + "\" border=\"0\"></layer>"); 
+} else { 
+document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src=\"" + snowflake + "\" border=\"0\"></layer>"); 
+ } 
+} else if (ie4up) { 
+if (i == 0) { 
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src=\"" + snowflake + "\" border=\"0\"></div>"); 
+} else { 
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src=\"" + snowflake + "\" border=\"0\"></div>"); 
+ } 
+ } 
+} 
+function snowNS() { // Netscape main animation function 
+for (i = 0; i < no; ++ i) { // iterate for every dot 
+yp[i] += sty[i]; 
+if (yp[i] > doc_height-50) { 
+xp[i] = Math.random()*(doc_width-am[i]-30); 
+yp[i] = 0; 
+stx[i] = 0.02 + Math.random()/10; 
+sty[i] = 0.7 + Math.random(); 
+doc_width = self.innerWidth; 
+doc_height = self.innerHeight; 
+} 
+dx[i] += stx[i]; 
+document.layers["dot"+i].top = yp[i]; 
+document.layers["dot"+i].left = xp[i] + am[i]*Math.sin(dx[i]); 
+} 
+setTimeout("snowNS()", speed); 
+} 
+function snowIE() { // IE main animation function 
+for (i = 0; i < no; ++ i) { // iterate for every dot 
+yp[i] += sty[i]; 
+if (yp[i] > doc_height-50) { 
+xp[i] = Math.random()*(doc_width-am[i]-30); 
+yp[i] = 0; 
+stx[i] = 0.02 + Math.random()/10; 
+sty[i] = 0.7 + Math.random(); 
+doc_width = document.body.clientWidth; 
+doc_height = document.body.clientHeight; 
+} 
+dx[i] += stx[i]; 
+document.all["dot"+i].style.pixelTop = yp[i]; 
+document.all["dot"+i].style.pixelLeft = xp[i] + am[i]*Math.sin(dx[i]); 
+} 
+setTimeout("snowIE()", speed); 
+} 
+if (ns4up) { 
+snowNS(); 
+} else if (ie4up) { 
+snowIE(); 
+} 
+// End --> 
+</SCRIPT> 
+</CENTER> <div style="display:none;"><script language="javascript" type="text/javascript" src="/js/foot.js"></script><script type="text/javascript" src="/source/data/js/stat.js"></script><script type="text/javascript" src="/source/data/js/stat2.js"></script></div>
+</BODY> 
+</HTML>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>先道歉再进入查看</title>
+    <script type="text/javascript" src="js/jquery.min.js" ></script>
+    <style>
+    .bdiv{background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(245, 245, 245); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(204, 204, 204); border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; background-position: initial initial; background-repeat: initial initial; }
+</style>
+</head>
+<body>
+<script>
+    function check()
+    {
+        var sorry = $('#sorry').val();
+        if(sorry == '对不起')
+        {
+            alert('亲，态度不错哦，准备跳转进入！');
+            window.location.href="http://www.langmanpuzi.com";
+
+        }
+        else
+        {
+            alert('亲，你是什么态度呀？打屎你！');
+        }
+    }
+</script>
+<div style="width: 500px; margin: 0 auto;">
+    <img src="sorrybg.jpg" border="0" />
+    <input id="sorry" style="float:left; height:30px; width:350px; line-height:30px; color:#CCC; font-size: 16px;" type="text" class="bdiv gray" value="---我爱你提示请输入：“对不起”---" onfocus="this.className='bdiv';if (this.value=='---我爱你提示请输入：“对不起”---') {this.value=''}" onblur="if(this.value==''){this.className+=' gray';this.value='---我爱你提示请输入：“对不起”---'}">
+    <input id="check" class="bdiv" style="float: right; font-size: 16px; height:30px; width:100px;" type="button" value="注意态度" onclick="check()">
+
+</div>
+</body>
+</html>

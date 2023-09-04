@@ -1,0 +1,81 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/garden.js" ></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+	  <div id="content">
+			<div id="code">
+				<span class="comments">某人：</span><br />
+				<span class="space"><span class="comments">你还好么！</span></span><br />
+				<span class="space"/><span class="comments">只有在你的微笑里，我才有呼吸，还贪恋着你的风情，诱惑着你的神秘，埋葬了我的爱情，脉脉之情如一溪春水，快刀难斩断，随着天各一方的时间越来越长，我的思念也越来越深，我很想找一个万籁俱寂的深夜或一个阳光明媚的早晨，把许多心底的惆怅、寂寞向你倾诉。某人，我们的故事是最感人，最真实的，早安，我永恒的爱人，虽然我尚未起床，但思想已经飞到你的身边来了，不管今世也好来世也好，我所要的只有你。我要与你同坐在有着月光的草坪上，一起遥望着繁星点缀的夜空，讲述那人间古老的爱情神话。人生不止，寂寞不已。寂寞人生爱无休，寂寞是爱永远的主题。</span><br />
+				<span class="space"/><span class="comments">某人，在我们相识的这段时间我感觉到我自己的无主我从来未想过你会离开我飞车是我们认识的第一次这一年多来我都不知道我是怎么过来的每天跟你东扯扯西扯扯难道爱情就是这样么得不到的是最好的得到的。不懂得珍惜我知道我自己爱聊但是在每个人的最心底不都一个最爱的么,难道我们以前说的过的话你都忘记么.就因为玩了一个月感情没有我对你的深么.爱这个字谁都会说.难道把我逼疯了这就是你想要的结果么.我说再多还有什么用么,我心里那份难受有谁能知道呢.我心里那份痛苦谁会知道阿.为什么要这样对我.我爱的是你啊你跟我在一起真的不会幸福么.还是你对我没有了感觉.没有了爱.爱一个人难道会这么累么.说多了你也会难看你知道么我看到你哭我心里多难受.这个是我做的最大的挽留了.相遇到相爱到相知.你以后少吃点把别就知道吃零食.多吃点饭蔬菜这样你才能长个.这个专属于你一个人.也只能是你自己独有的我自己做的,我心里真的好爱你. 这座城市我也没有好留念的了,看着你跟他甜言蜜语,心里那些疼让人酸我都感觉我自己累了.老了.每当我自己用心去爱的时候总会受伤. </span><br />
+				<span class="space"/><span class="comments">某人，保留一个最浪漫的故事，给你一声祝福，一个kiss，爱你直到永远！亲爱的，理解我吗？我不是弱智，但我会傻傻的爱你到永远。某人，我只想和你白头到老，美轮美奂的你编织着神话，创造着奇迹，只因让我遇到你。</span><br />
+				<span class="space"/><span class="comments">2013.08.10</span><br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						某人：
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						永远爱你，一辈子，不分离！<br/>
+						<div class="signature">- Lover</div>
+					</div>
+				</div>
+			</div>
+      </div>
+		<div id="copyright">
+			<a href="http://www.langmanpuzi.com" target="_blank">浪漫铺子</a> Copyright © 2011-2015
+	  </div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2013, 05, 14);   //记得有bug
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "提醒您：IE低版本用户请一边惭愧去吧^_^<br/>"+"请先升级您的浏览器，效果很炫哦~~"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+<audio src="http://tsmusic24.tc.qq.com/4830437.mp3" autoplay="autoplay"></audio>
+<!-- 记得在这里更改音乐 -->
+</body>
+</html>
+
+
+
