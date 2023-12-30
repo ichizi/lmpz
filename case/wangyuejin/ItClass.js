@@ -84,7 +84,7 @@ KISSY.add(function (S, Node, Event, Audio) {
          var self = this;
          self.isplay = true;
          self.MelodyObj && self.MelodyObj.play();
-         var timeEvent = "07.03,08.24,09.22,11.30,12.05,12.21,01.01".split(',');
+         var timeEvent = "07.03,08.24,09.22,11.30,12.05,12.11,01.01".split(',');
          //  这里生日显示的数字，注意更新最后一个为真实的生日
          // if (S.get('#tips').style.display == 'block') {
          Node.one('#tips') && Node.one('#tips').addClass('animated flipOutX');
